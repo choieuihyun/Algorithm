@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author amamm
+ *
+ */
+module AlgorithmStudy {
+}
