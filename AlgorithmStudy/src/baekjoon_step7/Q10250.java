@@ -2,7 +2,7 @@ package baekjoon_step7;
 
 import java.util.Scanner;
 
-public class Q10250 { // ¿Ö Ä¿¹ÔÀÌ ¾ÈµÇÂ¡?
+public class Q10250 { // ¿Ö Ä¿¹ÔÀÌ ¾ÈµÇÂ¡
 
 	public static void main(String[] args) {
 
