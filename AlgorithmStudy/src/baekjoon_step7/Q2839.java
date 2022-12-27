@@ -5,23 +5,22 @@ import java.util.Scanner;
 public class Q2839 {
 
 	public static void main(String[] args) {
+		
 		Scanner scanner = new Scanner(System.in);
 		
 		int n = scanner.nextInt();
 		
-		int a = n / 5;
-		int b = a / 3;
-		
-		if(n % 5 == 0) {
-			System.out.print(n/5);
+		if (n == 4 || n == 7) {
+			System.out.println(-1);
 		}
-		else if(b > 1) {
-			b = a / 3;
-			System.out.print(a+b);
+		else if (n % 5 == 0) {
+			System.out.println(n/5);
 		}
-		else {
-			b = 1;
-			System.out.print(a+b);
+		else if (n % 5 == 1 || n % 5 == 3) {
+			System.out.println((n/5) + 1);
+		}
+		else if (n % 5 == 2 || n % 5 == 4) {
+			System.out.println((n/5) + 2);
 		}
 		
 
