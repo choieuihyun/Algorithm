@@ -12,7 +12,7 @@ public class Q10757 {
 		BigInteger a = scanner.nextBigInteger();
 		BigInteger b = scanner.nextBigInteger();
 		
-		System.out.print(a.add(b));
+		System.out.print(a.add(b)); // bigInteger
 
 	}
 
