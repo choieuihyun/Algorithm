@@ -36,7 +36,8 @@ public class Q2581 {
 		if(num < 2)
 			return false;
 		
-		for(int i = 2; i < Math.sqrt(num); i++) { // 제곱근으로하면 합이 달라짐.
+		for(int i = 2; i <= Math.sqrt(num); i++) { // 제곱근으로하면 합이 달라짐. 아 제곱근으로 하면 부등호를 <=로 해야지 멍청아.
+												   // 아예 1이 빠져서 숫자가 달라지잖아.
 			if(num % i == 0)
 				return false;
 		}
