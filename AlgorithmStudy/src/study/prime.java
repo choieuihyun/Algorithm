@@ -17,6 +17,7 @@ public class prime {
 		for(int i = 0; i < prime.length; i++) {
 			if(prime[i] == false)
 				count++;
+			System.out.print(prime[i]);
 		}
 		
 		System.out.print(count);
