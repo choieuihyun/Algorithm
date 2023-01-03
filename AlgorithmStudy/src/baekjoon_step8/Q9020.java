@@ -33,7 +33,6 @@ public class Q9020 {
 }
 			
 	public static void get_prime() {
-		
 
 		prime[0] = prime[1] = true;
 		
