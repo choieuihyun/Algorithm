@@ -1,4 +1,4 @@
-package baekjoon_step10;
+ package baekjoon_step10;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -22,11 +22,13 @@ public class Q10989 {
 		
 		StringBuilder sBuilder = new StringBuilder();
 		
+
+		
 		for(int i = 0; i < array.length; i++) {
 			
 			while(array[i] > 0) {
 				sBuilder.append(i).append('\n');
-				array[i]--;
+				array[i]--; // 아 같은숫자때문에 이렇게 한거구나.
 			}
 		}
 		
