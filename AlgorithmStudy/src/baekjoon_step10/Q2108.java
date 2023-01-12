@@ -88,7 +88,7 @@ public class Q2108 {
 		System.out.println(range);
 	}
 	
-//	7 저격데이터 첨부합니다!
+//	7 저격데이터 첨부합니다!!
 //	1
 //	2
 //	8
