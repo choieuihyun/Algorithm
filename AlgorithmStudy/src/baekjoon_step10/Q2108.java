@@ -51,8 +51,7 @@ public class Q2108 {
 			range = max-min;
 		}
 		
-		int count = 0;	// 중앙값 빈도 누적 수 
-		int mode_max = 0; 	// 최빈값의 최댓값  
+		int frequency_max = -10000; 	// 최빈값의 최댓값  
 		
 		// 이전의 동일한 최빈값이 1번만 등장했을경우 true, 아닐경우 false
 		boolean flag = false;	 
@@ -63,21 +62,22 @@ public class Q2108 {
 //				frequency = i;
 //			}
 			
-			if(mode_max < array[i]) {
-				mode_max = array[i];
+			if(frequency_max < array[i]) {
+				frequency_max = array[i];
 				frequency = i;
 				flag = true;
 			}
-			
-			else if(mode_max == array[i] && flag == true) {
-				frequency = i;
-				flag = false;					
+				
+			else if(frequency_max < array[i] && flag == true) {
+				frequency = i;					
+				flag = false;
 			}
 				
+			
 		}
 		
 		
-		System.out.println((int)Math.round(avg));
+		System.out.println((int)Math.round((double)(avg)));
 		System.out.println(center);
 		
 		if(frequency > 4000) 
@@ -87,5 +87,14 @@ public class Q2108 {
 
 		System.out.println(range);
 	}
+	
+//	7 저격데이터 첨부합니다
+//	1
+//	2
+//	8
+//	-88
+//	-1
+//	12
+//	15
 
 }
