@@ -11,7 +11,7 @@ public class Q11650 {
 		
 		int num = scanner.nextInt();
 		
-		int [][] arr = new int [num][2];
+		int [][] arr = new int [num][2]; // 입력 형이 두개 다 같아서 됐던거구나.
 		
 		for(int i = 0; i < num; i++) {
 			arr[i][0] = scanner.nextInt();
