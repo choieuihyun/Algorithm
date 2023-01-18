@@ -21,7 +21,6 @@ public class Q18870 {
 		int [] compArray = new int [N];
 		HashMap<Integer, Integer> rankingMap = new HashMap<Integer, Integer>();
 		
-		
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		
 		for(int i = 0; i < N; i++) {
