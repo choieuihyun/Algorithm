@@ -1,8 +1,8 @@
-package backjoon_step1;
+package baekjoon;
 
 import java.util.Scanner;
 
-public class Q1000 { // Main으로 해야 백준 실행됨.
+public class Q1001 { // Main으로 해야 백준 실행됨.
 	
 	public static void main(String [] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -10,7 +10,7 @@ public class Q1000 { // Main으로 해야 백준 실행됨.
 		int a = scanner.nextInt();
 		int b = scanner.nextInt();
 		
-		System.out.print(a+b);
+		System.out.print(a-b);
 	}
 
 }
