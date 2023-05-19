@@ -17,8 +17,11 @@ public class Q9020 {
 		for(int i = 0; i < t; i++) {
 			
 			int s = scanner.nextInt();
+			
 			int a = s/2;
+			
 			int b = s/2;
+			
 			
 			while(true) {
 				if(prime[a] == false && prime[b] == false) {
