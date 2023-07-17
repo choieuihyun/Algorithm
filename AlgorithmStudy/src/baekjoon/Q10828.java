@@ -18,7 +18,6 @@ public class Q10828 {
 		StringTokenizer st;
 		
 		int num = Integer.parseInt(br.readLine());
-				
 		
 		
 		for(int i = 0; i < num; i++) {
@@ -42,9 +41,7 @@ public class Q10828 {
 						sb.append(array.remove(array.size() -1)).append('\n');
 					}
 						
-					break;
-			
-				
+					break;	
 				
 				case "size": 
 					sb.append(array.size()).append('\n');
