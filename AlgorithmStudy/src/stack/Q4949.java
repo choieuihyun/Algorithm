@@ -36,7 +36,7 @@ public class Q4949 {
 			
 			else if (c == ')') {
 				
-				if ( stack.peek() != '(' || stack.empty()) {
+				if (stack.empty() || stack.peek() != '(') {
 					return "no";
 				} else
 					stack.pop();
