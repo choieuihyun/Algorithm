@@ -4,12 +4,10 @@ import java.util.Scanner;
 
 public class Q15651 {
 	
-	static int N;
-	static int M;
+	static int N,M;
 	static int [] array;
-	static boolean [] visited;
 	static StringBuilder sb = new StringBuilder();
-	
+
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -18,14 +16,13 @@ public class Q15651 {
 		M = sc.nextInt();
 		
 		array = new int[M];
-		visited = new boolean[N];
 		
-		dfs(N, M, 0);
+		dfs(0);
 		System.out.print(sb);
 
 	}
 	
-	static void dfs(int N, int M, int depth) {
+	static void dfs(int depth) {
 		
 		if(depth == M) {
 			for(int val : array) {
@@ -38,13 +35,8 @@ public class Q15651 {
 		
 		for(int index = 0; index < N; index++) {
 			
-			if(!visited[index]) {
-				
-				array[depth] = index+1;
-				dfs(N, M, depth + 1);
-				
-			}
-			
+			array[depth] = index+1;
+			dfs(depth + 1);
 			
 		}
 		
