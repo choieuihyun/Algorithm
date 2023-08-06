@@ -7,47 +7,50 @@ import java.util.Scanner;
 
 public class Q15649 {
 	
-	static int [] array;
+	static int N, M;
 	static boolean [] visited;
+	static int [] array;
 	
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int N = sc.nextInt();
-		int M = sc.nextInt();
+		N = sc.nextInt();
+		M = sc.nextInt();
 		
-		array = new int[M];
 		visited = new boolean[N];
+		array = new int[M];
 		
-		dfs(N, M, 0);
-		
+		dfs(0);
 		
 	}
 	
-	static void dfs(int N, int M, int depth) {
+	static void dfs(int depth) {
 		
-		if (depth == M) {
-			
-			for (int val : array) {
-				System.out.println(val + " ");
+		if(depth == M) {
+			for(int val : array) {
+				System.out.print(val + " ");
 			}
-			
 			System.out.println();
 			return;
-			
 		}
 		
-		for (int index = 0; index < N; index++) {
-			
-			visited[index] = true;
-			array[depth] = index + 1;
-			dfs(N, M, depth + 1);
-			visited[index] = false;
-			
+		for(int index = 0; index < N; index++) {
+		
+			if (visited[index] == false) {
+				
+				visited[index] = true;
+				array[depth] = index + 1;
+				dfs(depth + 1);
+				
+				visited[index] = false;
+			}
 			
 		}
 		
 	}
+	
+	
+	
 
 }
