@@ -20,6 +20,7 @@ public class Q9663 {
 		
 	}
 	
+	// 메서드 이름도 중요
 	static void nQueen(int depth) {
 		
 		if(depth == N) {
@@ -40,6 +41,7 @@ public class Q9663 {
 		
 	}
 	
+	// 메서드 이름도 중요
 	// [2,0,4,8]
 	static boolean posibility(int col) {
 		
