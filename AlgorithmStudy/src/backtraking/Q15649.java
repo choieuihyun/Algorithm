@@ -27,7 +27,7 @@ public class Q15649 {
 	
 	static void dfs(int depth) {
 		
-		if(depth == M) {
+		if(depth == M) { // BaseCondition일 때 출력할꺼야. depth가 내가 입력한 M과 동일해질 때가 BaseCondition임.
 			for(int val : array) {
 				System.out.print(val + " ");
 			}
@@ -35,22 +35,20 @@ public class Q15649 {
 			return;
 		}
 		
-		for(int index = 0; index < N; index++) {
-		
-			if (visited[index] == false) {
+		for(int i = 0; i < N; i++) { // 그러면 BaseCondition이 아닐 때 내가 탐색하려는 범위에 따라 후보군을 찾아야겠지?
+			
+			// 처음에 배열 초기화하면 다 false임.
+			if(!visited[i]) { // 가지치기 하는 부분. 방문한 곳은 가지 않음.
 				
-				visited[index] = true;
-				array[depth] = index + 1;
+				array[depth] = i+1;
+				visited[i] = true; // 가지치기 하면서 방문한 곳은 true로 바꿔줘서 가지가 쳐지도록 만듦.
 				dfs(depth + 1);
+				visited[i] = false; // 다음 단계에서 다시 탐색해야하니까 false로 바꿔주는것.
 				
-				visited[index] = false;
 			}
 			
 		}
-		
+			
 	}
 	
-	
-	
-
 }

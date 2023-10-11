@@ -15,16 +15,16 @@ public class Q15650 {
 		N = sc.nextInt();
 		M = sc.nextInt();
 		
-		array = new int[M];
 		visited = new boolean[N];
+		array = new int[M];
 		
 		dfs(0, 1);
 		
 	}
 	
-	static void dfs(int depth, int x) {
+	static void dfs(int depth, int a) {
 		
-		if(depth == M) {
+		if(depth == M) { // baseCondition
 			for(int val : array) {
 				System.out.print(val + " ");
 			}
@@ -32,15 +32,19 @@ public class Q15650 {
 			return;
 		}
 		
-		for(int index = x; index <= N; index++) {
+		for(int i = a; i <= N; i++) {
+
+				array[depth] = i;
+				dfs(depth + 1, i+1);
 			
-				array[depth] = index;
-				dfs(depth + 1, index + 1);
-				
 			
 		}
 		
 	}
+	
+	
+	
+
 	
 
 }

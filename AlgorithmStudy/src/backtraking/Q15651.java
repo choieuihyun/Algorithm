@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Q15651 {
 	
 	static int N,M;
+	static boolean [] visited;
 	static int [] array;
-	static StringBuilder sb = new StringBuilder();
-
+	
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -15,27 +15,26 @@ public class Q15651 {
 		N = sc.nextInt();
 		M = sc.nextInt();
 		
+		visited = new boolean[N];
 		array = new int[M];
 		
 		dfs(0);
-		System.out.print(sb);
-
+		
 	}
 	
 	static void dfs(int depth) {
 		
 		if(depth == M) {
 			for(int val : array) {
-				sb.append(val + " ");
+				System.out.print(val + " ");
 			}
-			
-			sb.append('\n');
+			System.out.println();
 			return;
 		}
 		
-		for(int index = 0; index < N; index++) {
+		for(int i = 0; i < N; i++) {
 			
-			array[depth] = index+1;
+			array[depth] = i+1;
 			dfs(depth + 1);
 			
 		}
