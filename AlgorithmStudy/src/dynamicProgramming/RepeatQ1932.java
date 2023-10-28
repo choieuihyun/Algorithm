@@ -3,52 +3,40 @@ import java.util.Scanner;
 
 public class RepeatQ1932 {
 	
-	static int tri[][];
-	static Integer dp[][];
-	static int N;
+	static int [][] tri;
+	static Integer [][] dp;
 	
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		N = sc.nextInt();
+		int N = sc.nextInt();
 		
-		tri = new int [N][N];
-		dp = new Integer [N][N];
+		tri = new int[N][N];
+		dp = new Integer[N][N];
 		
 		for(int i = 0; i < N; i++) {
 			
-			for(int j = 0; j <= i; j++) {
+			for(int j = 0; j < i+1; j++) {
 				
 				tri[i][j] = sc.nextInt();
- 				
+			
 			}
 			
 		}
 		
-		for(int i = 0; i < N; i++) {
-			
-			dp[N-1][i] = tri[N-1][i];
-			
-		}
-		
-		System.out.println(triangle(0,0));
-		
+		dp[0][0] = tri[0][0];
 		
 	}
 	
 	static int triangle(int depth, int index) {
 		
-		if(depth == N-1) // Àç±Í¸¦ ¸¶ÃÆÀ» ½ÃÀÇ Å»Ãâ Á¶°Ç. baseCondition
-			return dp[depth][index];
-		
 		if(dp[depth][index] == null) {
 			
-			dp[depth][index] = Math.max(triangle(depth + 1, index), triangle(depth + 1, index + 1)) + tri[depth][index];
+			dp[depth][index] = triangle(depth - 1, index - 1);
 			
 		}
 		
 		return dp[depth][index];
 	}
-
 }
