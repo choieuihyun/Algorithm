@@ -4,33 +4,44 @@ import java.util.Scanner;
 
 public class RepeatQ9461 {
 	
-	static Long [] dp = new Long [101];
+	static Integer dp[];
 
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		
-		int T = sc.nextInt();
+		int N = scanner.nextInt();
 		
-		dp[0] = 0L;
-		dp[1] = 1L;
-		dp[2] = 1L;
-		
-		while(T-- > 0) {
+		while(N-- > 0) {
 			
-			System.out.println(padovan(sc.nextInt()));
+			int a = scanner.nextInt();
+
+			dp = new Integer[a+1];
 			
-		}	
+			
+			dp[0] = 0;
+			dp[1] = 1;
+			dp[2] = 1;
+			
+			System.out.println(find(a));
+			
+		}
+		
+
+		
+
 		
 
 	}
 	
-	static Long padovan(int n) {
+	static int find(int N) {
 		
-		if(dp[n] == null)
-			dp[n] = padovan(n-2) + padovan(n-3);
+		if(dp[N] == null) {
+			dp[N] = find(N-2) + find(N-3);
+		}
 		
-		return dp[n];
+		return dp[N];
+		
 	}
 
 }
