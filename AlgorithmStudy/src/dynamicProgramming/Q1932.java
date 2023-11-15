@@ -40,7 +40,8 @@ public class Q1932 {
 	
 	static int triangle(int depth, int index) {
 		
-		if(depth == N-1) {
+		if(depth == N-1) { // 이 조건 때문에 static으로 썼는데 사실 파라미터로 받아도 됨. 그냥 깔끔하게 하려고 한거지.
+						   // 이런게 은근 센스인듯.
 			
 			return dp[depth][index];
 			
@@ -50,8 +51,11 @@ public class Q1932 {
 		if(dp[depth][index] == null) {
 			dp[depth][index] = Math.max(triangle(depth + 1, index), triangle(depth + 1, index + 1)) + triangleArr[depth][index];
 		}
+		// dp[3][3]은 dp[4][3], dp[4][4] 중에 큰 값 + 원래 삼각형 배열인  triangleArr[3][3] 을 더하는 것임.
+		// 이와 같은 과정은 dp[0][0]에 가장 큰 값, dp[][]는 값이 역순으로 최댓값이 들어가는 구조이기 때문임.
 		
 		return dp[depth][index];
 	}
+
 
 }
