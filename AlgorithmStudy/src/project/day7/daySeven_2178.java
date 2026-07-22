@@ -5,6 +5,7 @@ import java.util.*;
 public class daySeven_2178 {
 
     static boolean [][] visited;
+    // 이게 미로라 2차원 배열로 한거고, 트리면 1차원 배열 안에 ArrayList를 넣어서 add 하는 방식으로 했을듯
     static int [][] maze;
     static int [][] dist;
     static int N;
@@ -43,7 +44,7 @@ public class daySeven_2178 {
         // 2차원 배열로 진행하니 당연히 visited도 2차원 배열
         visited[row][column] = true;
         
-        // 최단거리 == BFS, 때문에 Queue 사용
+        // 최단거리 == BFS, 때문에 Queue 사용, Queue에 첫 위치를 넣어두는게 중요하다.
         Queue<int []> queue = new LinkedList<>();
         // 이게 행,열의 위치를 찾는거니 배열을 저장하는거지.
         queue.offer(new int []{row, column}); // 첫 행, 첫 열 바로 넣음
