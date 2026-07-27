@@ -92,6 +92,9 @@ public class Virus {
             int nr = row + dr[i];
             int nc = column + dc[i];
 
+            // 이 문제에서 배워야 할 내용이 있다.
+            // 이 문제는 바이러스 문제이고, virusMap[nr][nc] = 2를 하기때문에
+            // if (virusMap[nr][nc] == 0) 일 때 감염, dfs로 조건을 걸어준다면, !visited[nr][nc]는 필요가 없지.
             if (nr >= 0 && nr < N && nc >= 0 && nc < M
                 && !visited[nr][nc] && virusMap[nr][nc] != 1
             ) {
